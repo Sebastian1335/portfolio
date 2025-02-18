@@ -7,20 +7,20 @@ export const Portfolio = () => {
     const proyectos=[{
         title: "Gif App (Básico)",
         image: "https://i.gifer.com/origin/93/935d72c7bc35828ea93b5898691f28fd_w200.gif", 
-        link: "https://graceful-crisp-60f808.netlify.app/",
+        link: "https://gif-app-1335.netlify.app/",
         repo: "https://github.com/FrogSyntax/react-gif-expert"
       }, {
-        title: "E-commerce UI",
-        image: "https://via.placeholder.com/300", 
-        link: "#",
-        repo: "https://github.com/FrogSyntax/react-gif-expert"
+        title: "Heroes",
+        image: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bc056787-84e2-43a3-91da-a3f95c10e0e5/dd2kjta-2b1cfdec-5c77-4ceb-9190-4f7ad0f813b6.png/v1/fill/w_1280,h_1283/my_own_idea_of_a_dc_vs_marvel_video_game_lc_by_liamcampbell_dd2kjta-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MyIsInBhdGgiOiJcL2ZcL2JjMDU2Nzg3LTg0ZTItNDNhMy05MWRhLWEzZjk1YzEwZTBlNVwvZGQya2p0YS0yYjFjZmRlYy01Yzc3LTRjZWItOTE5MC00ZjdhZDBmODEzYjYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.9EgNZVAGX5MMvMIYaED_n5UgTurojK5UBksj92V6tA0", 
+        link: "https://heroes-1335.netlify.app/",
+        repo: "https://github.com/Sebastian1335/Heroes"
       }, {
         title: "App de Tareas",
         image: "https://via.placeholder.com/300", 
         link: "#",
         repo: "https://github.com/FrogSyntax/react-gif-expert"
       }]
-
+      const skills = ["Python (Avanzado)", "JavaScript (Avanzado)", "TypeScript (Avanzado)", "SQL (Avanzado)", "Node.js (Avanzado)", "React (Avanzado)", "Docker (Básico)", "Git/GitHub (Avanzado)", "Jest(Avanzado)"]
       // const onClick = () => {
       //   alert("Función no disponible")
       // }
@@ -52,9 +52,9 @@ export const Portfolio = () => {
       <Box className="animate__animated animate__fadeInRight" sx={{ mb: 4 }}>
         <Typography variant="h4" color="secondary.light">Habilidades</Typography>
         <Grid2 container spacing={2} mt={2}>
-          {["Python", "JavaScript", "TypeScript", "SQL", "Node.js", "React", "Docker", "Git/GitHub", "Jest"].map((skill) => (
+          {skills.map((skill) => (
             <Grid2 item xs={12} sm={6} key={skill}>
-              <Typography variant="h6">✅ {skill} (Avanzado)</Typography>
+              <Typography variant="h6">✅ {skill} </Typography>
             </Grid2>
           ))}
         </Grid2>
