@@ -41,28 +41,32 @@ const projects = {
             repo: "https://github.com/Sebastian1335/Journal.git",
             tags: ["React", "Firebase", "Redux"],
         },
+        {
+            title: "JWT inseguro proyecto SSTI",
+            description:
+                "Pagina web con malas practicas de JWT con fines académicos",
+            image: "https://cdn.worldvectorlogo.com/logos/jwt-3.svg",
+            link: "https://ssti-front.netlify.app",
+            repo: "https://github.com/Sebastian1335/ssti-front",
+            tags: ["React", "Express", "Redux", "JWT"],
+        },
     ],
     backend: [
         {
             title: "CUNI Backend",
             description:
                 "API RESTful para plataforma educativa con arquitectura escalable",
-            repo: "https://github.com/Sebastian1335/CUNI-Backend",
-            tags: ["Node.js", "Express", "SQL"],
+            image: "https://cunieduca.com/Assets/Landing/image%201.png",
+            repo: "https://github.com/Sebastian1335/cuyBack",
+            tags: ["Node.js", "Express", "SQL", "Prisma"],
         },
         {
-            title: "Sistema de Gestión de Héroes",
-            description: "Backend para aplicación de catálogo de superhéroes",
-            repo: "https://github.com/Sebastian1335/Heroes-Backend",
-            tags: ["Node.js", "MongoDB", "JWT"],
-        },
-        {
-            title: "API de Notas",
-            description:
-                "Servicio backend para aplicación de notas con autenticación",
-            repo: "https://github.com/Sebastian1335/Notas-API",
-            tags: ["Node.js", "Firebase", "Express"],
-        },
+            title: "Aplicacion de terminal simple",
+            description: "Aplicacion de terminal para operaciones de multiplicacion",
+            image: "https://cdn.iconscout.com/icon/free/png-256/free-terminal-logo-icon-download-in-svg-png-gif-file-formats--devicons-pack-design-development-icons-458204.png?f=webp&w=256",
+            repo: "https://github.com/Sebastian1335/aplicacionTerminal",
+            tags: ["Node.js", "FS", "Jest", "Yargs"],
+        }
     ],
 };
 
@@ -270,6 +274,12 @@ export const Portfolio = () => {
                     <div className="projects-grid">
                         {projects.backend.map((project, index) => (
                             <div key={index} className="project-card">
+                                <div className="project-image">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                    />
+                                </div>
                                 <div className="project-content">
                                     <h3>{project.title}</h3>
                                     <p>{project.description}</p>
@@ -314,7 +324,7 @@ export const Portfolio = () => {
                         <button
                             onClick={() => {
                                 const link = document.createElement("a");
-                                link.href = "/docs/CV.pdf"; // Asegúrate de que el archivo esté en `public/docs/`
+                                link.href = "/docs/CV.pdf"; 
                                 link.download = "CV.pdf";
                                 document.body.appendChild(link);
                                 link.click();
