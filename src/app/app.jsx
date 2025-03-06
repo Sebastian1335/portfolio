@@ -42,6 +42,15 @@ const projects = {
             tags: ["React", "Firebase", "Redux"],
         },
         {
+            title: "Calendario (Avanzado)",
+            description:
+                "Calendario con CRUD de eventos",
+            image: "https://img.freepik.com/vector-gratis/estilo-glifo-rojo-calendario_78370-7233.jpg",
+            link: "https://calendar-back-production.up.railway.app",
+            repo: "https://github.com/Sebastian1335/calendar-back",
+            tags: ["React", "Node.js", "Mongo", "express", "Redux"],
+        },
+        {
             title: "JWT inseguro proyecto SSTI",
             description:
                 "Pagina web con malas practicas de JWT con fines académicos",
